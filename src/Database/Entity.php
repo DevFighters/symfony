@@ -1,6 +1,6 @@
 <?php
 
-namespace CkAmaury\Symfony\Database;
+namespace DevFighters\Symfony\Database;
 
 use Doctrine\ORM\Mapping as ORM;
 

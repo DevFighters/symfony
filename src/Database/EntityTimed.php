@@ -1,9 +1,8 @@
 <?php
 
-namespace CkAmaury\Symfony\Database;
+namespace DevFighters\Symfony\Database;
 
-use CkAmaury\Symfony\APP;
-use CkAmaury\Symfony\DateTime\DateTime;
+use DevFighters\DateTime\DateTime;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -44,13 +43,13 @@ abstract class EntityTimed extends Entity {
     #[ORM\PrePersist]
     public function prePersist():void{
         $this
-            ->setInsAt(APP::getDB_Time())
-            ->setUpdAt(APP::getDB_Time());
+            ->setInsAt(new DateTime())
+            ->setUpdAt(new DateTime());
     }
 
     #[ORM\PreUpdate]
     public function preUpdate():void{
-        $this->setUpdAt(APP::getDB_Time());
+        $this->setUpdAt(new DateTime());
     }
 
     public function persist(bool $flush = false):static{

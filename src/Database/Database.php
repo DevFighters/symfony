@@ -1,6 +1,6 @@
 <?php
 
-namespace DevFighters\Symfony;
+namespace DevFighters\Symfony\Database;
 
 use Doctrine\DBAL\Result;
 use Doctrine\ORM\EntityManager;
