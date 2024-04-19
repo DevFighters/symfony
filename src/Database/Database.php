@@ -2,6 +2,7 @@
 
 namespace DevFighters\Symfony\Database;
 
+use DevFighters\Symfony\Symfony;
 use Doctrine\DBAL\Result;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Id\AssignedGenerator;
