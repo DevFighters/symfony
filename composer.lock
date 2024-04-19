@@ -1,0 +1,66 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "f4479a9f3486d3303e8657554b219839",
+    "packages": [
+        {
+            "name": "dev-fighters/php-datetime",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DevFighters/php-datetime.git",
+                "reference": "fa7942cb07b6a5d8c18591327424693e7787c8df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DevFighters/php-datetime/zipball/fa7942cb07b6a5d8c18591327424693e7787c8df",
+                "reference": "fa7942cb07b6a5d8c18591327424693e7787c8df",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DevFighters\\DateTime\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Dev Fighters"
+                }
+            ],
+            "description": "PHP tools",
+            "support": {
+                "issues": "https://github.com/DevFighters/php-datetime/issues",
+                "source": "https://github.com/DevFighters/php-datetime/tree/1.0.1"
+            },
+            "time": "2024-04-19T12:45:22+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=8.1",
+        "ext-ctype": "*",
+        "ext-curl": "*",
+        "ext-iconv": "*",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-intl": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

@@ -1,0 +1,27 @@
+{
+    "name": "dev-fighters/symfony",
+    "description": "mini-framework for Symfony",
+    "type": "library",
+    "license": "LGPL-3.0",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Dev Fighters"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-ctype": "*",
+        "ext-curl": "*",
+        "ext-iconv": "*",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-intl": "*",
+        "dev-fighters/php-datetime": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevFighters\\Symfony\\": "src"
+        }
+    }
+}
