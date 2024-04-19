@@ -18,10 +18,10 @@ INSTALLATION
         charset: utf8
         collate: utf8_unicode_ci
       types:
-        mediumint: CkAmaury\Symfony\Database\Type\MediumintType
-        tinyint: CkAmaury\Symfony\Database\Type\TinyintType
-        datetime: CkAmaury\Symfony\Database\Type\DateTimeType
-        date: CkAmaury\Symfony\Database\Type\DateType
+        mediumint: DevFighters\Symfony\Database\Type\MediumintType
+        tinyint: DevFighters\Symfony\Database\Type\TinyintType
+        datetime: DevFighters\Symfony\Database\Type\DateTimeType
+        date: DevFighters\Symfony\Database\Type\DateType
       dql:
         string_functions:
           replace: DoctrineExtensions\Query\Mysql\Replace
