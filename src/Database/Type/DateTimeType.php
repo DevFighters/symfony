@@ -2,7 +2,7 @@
 
 namespace DevFighters\Symfony\Database\Type;
 
-use DevFighters\Symfony\DateTime\DateTime;
+use DevFighters\DateTime\DateTime;
 use DateTimeInterface;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\ConversionException;
