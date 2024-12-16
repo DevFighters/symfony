@@ -7,18 +7,13 @@ use Doctrine\DBAL\Types\Type;
 
 class MediumintType extends Type {
 
+    const MEDIUMINT = 'mediumint'; // Nom unique du type
+
     public function getName():string {
-        return 'mediumint';
+        return self::MEDIUMINT;
     }
-    public function getSQLDeclaration(array $column, AbstractPlatform $platform):string {
-        $return = ($platform->getSmallIntTypeDeclarationSQL($column));
-        return ( str_replace ('SMALLINT','MEDIUMINT' ,$return));
-    }
-    public function convertToPHPValue($value, AbstractPlatform $platform):?int{
-        return (is_null($value)) ? null : (int)$value;
-    }
-    public function getBindingType():int {
-        return ParameterType::INTEGER;
+    public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform) {
+        return 'MEDIUMINT'.(!empty($fieldDeclaration['unsigned']) ? ' UNSIGNED' : '');
     }
 
 }

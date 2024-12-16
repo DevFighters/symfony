@@ -3,22 +3,18 @@ namespace DevFighters\Symfony\Database\Type;
 
 use Doctrine\DBAL\ParameterType;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\Type;
+use Doctrine\DBAL\Types\IntegerType;
 
-class TinyintType extends Type {
+class TinyintType extends IntegerType {
+
+    const TINYINT = 'tinyint'; // Nom unique du type
 
     public function getName():string {
-        return 'tinyint';
+        return self::TINYINT;
     }
-    public function getSQLDeclaration(array $column, AbstractPlatform $platform):string {
-        $return = ($platform->getSmallIntTypeDeclarationSQL($column));
-        return ( str_replace ('SMALLINT','TINYINT' ,$return));
+    public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform) {
+        return 'TINYINT'.(!empty($fieldDeclaration['unsigned']) ? ' UNSIGNED' : '');
     }
-    public function convertToPHPValue($value, AbstractPlatform $platform): ?int {
-        return (is_null($value)) ? null : (int)$value;
-    }
-    public function getBindingType():int {
-        return ParameterType::INTEGER;
-    }
+
 
 }
