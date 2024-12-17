@@ -17,7 +17,7 @@ class TinyintType extends IntegerType {
             return 'TINYINT(3) UNSIGNED';
         }
         else {
-            return 'TINYINT(4) UNSIGNED';
+            return 'TINYINT(4)';
         }
     }
 
