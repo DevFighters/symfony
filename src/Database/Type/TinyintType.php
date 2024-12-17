@@ -15,6 +15,9 @@ class TinyintType extends IntegerType {
     public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform) {
         return 'TINYINT'.(!empty($fieldDeclaration['unsigned']) ? ' UNSIGNED' : '');
     }
+    public function requiresSQLCommentHint(AbstractPlatform $platform) {
+        return true;
+    }
 
 
 }

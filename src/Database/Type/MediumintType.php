@@ -15,5 +15,8 @@ class MediumintType extends Type {
     public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform) {
         return 'MEDIUMINT'.(!empty($fieldDeclaration['unsigned']) ? ' UNSIGNED' : '');
     }
+    public function requiresSQLCommentHint(AbstractPlatform $platform) {
+        return true;
+    }
 
 }
