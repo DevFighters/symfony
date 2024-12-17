@@ -3,9 +3,9 @@ namespace DevFighters\Symfony\Database\Type;
 
 use Doctrine\DBAL\ParameterType;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\Type;
+use Doctrine\DBAL\Types\IntegerType;
 
-class MediumintType extends Type {
+class MediumintType extends IntegerType {
 
     const MEDIUMINT = 'mediumint'; // Nom unique du type
 
@@ -13,7 +13,8 @@ class MediumintType extends Type {
         return self::MEDIUMINT;
     }
     public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform) {
-        return 'MEDIUMINT'.(!empty($fieldDeclaration['unsigned']) ? ' UNSIGNED' : '');
+        $return = ($platform->getSmallIntTypeDeclarationSQL($fieldDeclaration));
+        return ( str_replace ('SMALLINT','MEDIUMINT' ,$return));
     }
 
     /** Avoid rewriting migrations */

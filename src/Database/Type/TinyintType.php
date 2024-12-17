@@ -13,7 +13,8 @@ class TinyintType extends IntegerType {
         return self::TINYINT;
     }
     public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform) {
-        return 'TINYINT'.(!empty($fieldDeclaration['unsigned']) ? ' UNSIGNED' : '');
+        $return = ($platform->getSmallIntTypeDeclarationSQL($fieldDeclaration));
+        return ( str_replace ('SMALLINT','TINYINT' ,$return));
     }
 
     /** Avoid rewriting migrations */
